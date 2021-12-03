@@ -1,5 +1,6 @@
 // $font-primary: 
 $font-primary: Arial, Helvetica, sans-serif;
+$font-footer: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 $color-primary: #0088BC;
 $color-red: #EF576C;
 
@@ -9,55 +10,73 @@ body{
     padding: 0;
     height: 100vh;
     width: 100vw;
+    overflow-x: hidden;
 }
 button{
     font-family: $font-primary;
+}
+.heading{
+    margin-top: 5rem;
+    font-size: 2rem;
+    color: darken($color-primary,10%);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    margin-top: 0;
+    
+    &:after{
+        content:'';
+        display: block;
+        margin-inline: auto;
+        background-color: $color-primary;
+        width: 40%;
+        height: 7px;
+        transition: all 2s 0 ease;
+        border-radius: 5px;
+    }
+
+}
+.logo{
+    width: 70px;
+    height: 80px;
 }
 
 
 // Header
 header{
     margin: 0;
-    height: 80vh;
-    background-image: URL("/successful-medical-team.png");
+    height: 90vh;
+
+    background-image: URL("/images/successful-medical-team.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     color: darken($color-primary,20%);
-    // text-shadow: 1px 1px 3px #000000;
+    outline: 2px solid $color-primary;
     display: flex;
     align-items: center;
 
     h3{
         font-weight: 500;
         margin: 0;
-        font-size: 1.5rem;
-        // text-shadow: 1px 1px 2px #000000;
+        font-size: clamp(1.5rem,3vw,1.75rem);
     }
     p{
         font-weight: 800;
-        font-size: 3rem;
+        font-size: clamp(1.8rem,5vw,3rem);
         margin: 0;
     }
     div{
         background-color: rgba(255, 255, 255, 0.8);
         width: 40%;
         padding: 3rem;
-    }
-    button{
-        margin-top: 2rem;
-        padding: 0.5rem;
-        border-color: transparent;
-        background-color: $color-red;
-        font: $font-primary;
-        color: white;
-        font-weight: 700;
+        max-height: 100%;
+        min-height: fit-content;
     }
 }
 
 nav{
     display: flex;
-    // border-bottom: 5px solid $color-primary;
     align-items: center;
     flex-grow: 100%;
     padding-inline: 3rem;
@@ -66,10 +85,6 @@ nav{
     background-color: $color-primary;
     font-weight: 600;
     height: 15%;
-    img{
-        width: 70px;
-        height: 80px;
-    }
     button{
         height: 50%;
         background-color: white;
@@ -100,34 +115,242 @@ nav{
         margin-right: 2rem;
     }
 }
-.services{
-    padding-top: 2rem;
-    h2{
-        font-size: 2rem;
-        color: darken($color-primary,10%);
-        font-weight: 700;
-        text-align: center;
+
+
+.about-us{
+    display: flex;
+    width: 100%;
+    height: 70vh;
+    border-bottom: 2px solid $color-primary;
+    margin-bottom: -2px;
+    div{
+        width: 50%;
     }
-    h2:after{
-        content:'';
-        display: block;
-        margin-inline: auto;
-        background-color: $color-primary;
-        width: 40%;
-        height: 7px;
-        transition: all 2s 0 ease;
-        // margin-left: -5px;
-        // margin-top: -5px;
-        border-radius: 5px;
-    }
-    .services-content{
-        display: flex;
+    .img{
+        width: 50vw;
+        background-image: URL("/images/about-us.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
 
     }
+    .text{
+        width: 40vw;
+        padding: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    h2{
+        padding: 0;
+        margin: 0;
+        &:after{
+            width: 140%;
+            margin-left: -20%;
+        }
+    }
+    p{
+        font-size: 1.25rem;
+        color: darken($color-primary,10%);
+    }
 }
-i{
-    color: $color-primary;
+.services{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 60vh;
+    padding: 4rem 0 4rem 0;
+    .services-content{
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: -30px;
+    }
+    .services-content div{
+        color: $color-primary;
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 30px;
+        outline: 1px solid $color-primary;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        padding: 2rem 0 2rem 0;
+        
+    }
+    border-bottom: 2px solid $color-primary;
+}
+.covid{
+    width: 100%;
+    height: 80vh;
+    background-image: URL("/images/pcr.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 2px solid $color-primary;
+
+    div{
+        width: 45%;
+        margin-left: 5%;
+        padding: 2rem 0 2rem 0;
+        background-color: rgba(255, 255, 255, 0.8);
+
+    }
+    h2{
+        font-size: 2rem;
+        &:after{
+            width: 80%;
+        }
+    }
+    h1{
+        margin-left: 3rem;
+        font-size: 2rem;
+        color: $color-primary;
+        
+    }
+    button{
+        font-size: 1rem;
+        margin-top: 0rem;
+        padding: 0.5rem;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        border-color: transparent;
+        background-color: $color-red;
+        font: $font-primary;
+        color: white;
+        font-weight: 700;
+    }
+}
+.contact-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
     
+    div{
+        width: 50vw;
+        margin: 0;
+        padding: 0;
+    }
+    h2{
+        color: white;
+        text-align: center;
+    }
+    .input-field{
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-color: $color-primary;
+        height: 100%;
+        > *{
+            width: 80%;
+        }
+    }
+    input[type=text]{
+        line-height: 2rem;
+        padding-left: 1rem;
+        // border-radius: 25px;
+        border-color: transparent;
+        font-family: $font-primary;
+        font-weight: 600;
+        font-size: 1rem;
+        color: hsl(230, 21%, 27%);
+
+        :hover{
+            outline-color: transparent;
+        }
+    }
+    input[type=text]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 700;
+        color: $color-primary;
+        opacity: 0.7; /* Firefox */
+      }
+      
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 700;
+        color: $color-primary;
+        opacity: 0.7; /* Firefox */
+    }
+    
+    ::-ms-input-placeholder { /* Microsoft Edge */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 700;
+        color: $color-primary;
+        opacity: 0.7; /* Firefox */
+    }
+    
+    button{
+        width: 40% !important;
+        margin-bottom: 30px;
+        background-color: $color-red;
+        border-color: transparent;
+        font-family: $font-primary;
+        color: white;
+        font-weight: 700;
+        padding: 0.5rem;
+    }
+
+    #msg{
+        height: 30%;
+    }
+    .submit-img{
+        width: 50%;
+        height: 100%;
+        box-shadow: inset 0 0 0 1000px rgba(0, 136, 188, 0.3);
+        background-image: URL("/images/submit1.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
+}
+footer{
+    background-color: darken($color-primary,10%);
+    font-family: $font-footer;
+    color: hsl(209, 100%, 92%);
+    font-weight: 500;
+    text-align: center;
+}
+.footer-contents{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 40vh;
+    div{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        line-height: 2rem;
+        max-width: 15rem;
+    }
+}
+.address{
+    padding-bottom: 2rem;
+}
+.rights{
+    background-color: darken($color-primary, 15%);
+    color: hsl(209, 33%, 69%);
+    height: 40px;
+    text-align: center;
+    p{
+        transform: translateY(50%);
+        margin: 0;
+    }
+}
+
+i{
+    color: darken($color-primary,10%);
 }
 
 
