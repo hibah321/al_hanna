@@ -10,10 +10,13 @@ body{
     padding: 0;
     height: 100vh;
     width: 100vw;
-    overflow-x: hidden;
+    // overflow-x: hidden;
 }
 button{
     font-family: $font-primary;
+}
+html{
+    scroll-behavior: smooth;
 }
 .heading{
     margin-top: 5rem;
@@ -31,7 +34,6 @@ button{
         background-color: $color-primary;
         width: 40%;
         height: 7px;
-        transition: all 2s 0 ease;
         border-radius: 5px;
     }
 
@@ -40,13 +42,27 @@ button{
     width: 70px;
     height: 80px;
 }
+.pcr-test{
+    font-size: 1rem;
+    margin-top: 0rem;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-color: transparent;
+    background-color: $color-red;
+    font: $font-primary;
+    color: white;
+    font-weight: 700;
+    
+}
 
 
 // Header
 header{
     margin: 0;
     height: 90vh;
-
+    box-sizing: border-box;
     background-image: URL("/images/successful-medical-team.png");
     background-position: center;
     background-repeat: no-repeat;
@@ -72,6 +88,7 @@ header{
         padding: 3rem;
         max-height: 100%;
         min-height: fit-content;
+        box-sizing: border-box;
     }
 }
 
@@ -84,7 +101,7 @@ nav{
     color: white;
     background-color: $color-primary;
     font-weight: 600;
-    height: 15%;
+    // height: 15%;
     button{
         height: 50%;
         background-color: white;
@@ -94,6 +111,7 @@ nav{
         border-color: transparent;
         box-sizing: border-box;
         padding: 1rem;
+        cursor: pointer;
     }
     .navbar-contents{
         margin-left: auto;
@@ -108,46 +126,54 @@ nav{
         padding: 0.5rem;
         border-radius: 25px;
         color: white;
+        cursor: pointer;
     }
     a{
         text-decoration: none;
         color: white;
         margin-right: 2rem;
     }
+    .logo{
+        margin: 1rem 0;
+    }
 }
 
 
 .about-us{
-    display: flex;
-    width: 100%;
-    height: 70vh;
+    display: grid;
+    grid-template-areas: "text img";
+    grid-template-columns: 1fr 1fr;
+    // grid-template-rows: 1fr 1fr;
+    max-width: 100%;
+    // min-height: 50vh;
     border-bottom: 2px solid $color-primary;
     margin-bottom: -2px;
-    div{
-        width: 50%;
-    }
+
     .img{
-        width: 50vw;
+        grid-area: img;
         background-image: URL("/images/about-us.png");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-
     }
     .text{
-        width: 40vw;
-        padding: 5%;
+        grid-area: text;
+        // width: 40vw;
+        box-sizing: border-box;
+        margin-inline: auto;
+        margin: auto auto;
         display: flex;
         align-items: center;
-        justify-content: space-around;
         flex-direction: column;
+        padding: 10%;
     }
     h2{
         padding: 0;
         margin: 0;
+        box-sizing: border-box;
         &:after{
-            width: 140%;
-            margin-left: -20%;
+            min-width: 100%;
+            // margin-left: %;
         }
     }
     p{
@@ -159,33 +185,37 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    min-height: 60vh;
     padding: 4rem 0 4rem 0;
+    box-sizing: border-box;
+    width: 100%;
     .services-content{
+        box-sizing: border-box;
         align-items: center;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
-        margin-top: -30px;
+        justify-content: space-evenly;
+        // margin-top: -30px;
     }
     .services-content div{
+        box-sizing: border-box;
         color: $color-primary;
-        width: 200px;
+        width: 300px;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        margin-top: 30px;
+        // margin-top: 30px;
         outline: 1px solid $color-primary;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         padding: 2rem 0 2rem 0;
+        margin-top: 1rem;
         
     }
     border-bottom: 2px solid $color-primary;
 }
 .covid{
     width: 100%;
-    height: 80vh;
+    // height: 80vh;
     background-image: URL("/images/pcr.png");
     background-position: center;
     background-repeat: no-repeat;
@@ -198,6 +228,7 @@ nav{
     div{
         width: 45%;
         margin-left: 5%;
+        margin: 10rem 0;
         padding: 2rem 0 2rem 0;
         background-color: rgba(255, 255, 255, 0.8);
 
@@ -214,27 +245,15 @@ nav{
         color: $color-primary;
         
     }
-    button{
-        font-size: 1rem;
-        margin-top: 0rem;
-        padding: 0.5rem;
-        margin-left: 50%;
-        transform: translateX(-50%);
-        border-color: transparent;
-        background-color: $color-red;
-        font: $font-primary;
-        color: white;
-        font-weight: 700;
-    }
 }
 .contact-form{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 60vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "form submit-img";
+    // height: 60vh;
     
     div{
-        width: 50vw;
         margin: 0;
         padding: 0;
     }
@@ -243,16 +262,26 @@ nav{
         text-align: center;
     }
     .input-field{
-        width: 50vw;
+        grid-area: form;
+        box-sizing: border-box;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
         background-color: $color-primary;
-        height: 100%;
         > *{
             width: 80%;
         }
+    }
+    .submit-img{
+        grid-area: submit-img;
+        box-sizing: border-box;
+        height: 500px;
+        box-shadow: inset 0 0 0 1000px rgba(0, 136, 188, 0.3);
+        background-image: URL("/images/submit1.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     input[type=text]{
         line-height: 2rem;
@@ -288,7 +317,9 @@ nav{
         color: $color-primary;
         opacity: 0.7; /* Firefox */
     }
-    
+    * >*{
+        margin-top: 30px;
+    }
     button{
         width: 40% !important;
         margin-bottom: 30px;
@@ -299,20 +330,9 @@ nav{
         font-weight: 700;
         padding: 0.5rem;
     }
-
     #msg{
-        height: 30%;
+        height: 150px;
     }
-    .submit-img{
-        width: 50%;
-        height: 100%;
-        box-shadow: inset 0 0 0 1000px rgba(0, 136, 188, 0.3);
-        background-image: URL("/images/submit1.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
 
 }
 footer{
@@ -351,6 +371,98 @@ footer{
 
 i{
     color: darken($color-primary,10%);
+}
+
+// hover states
+
+.phone:hover{
+    background-color: white;
+    border-color: $color-primary;
+    color: $color-primary;
+    svg{
+        fill: $color-primary;
+    }
+}
+.book:hover{
+    background-color: $color-primary;
+    border: 2px solid white;
+    color: white;
+}
+
+.pcr-test:hover, #submit:hover{
+    background-color: darken($color-red, 10%);
+    cursor: pointer;
+}
+
+// mobile design
+
+@media all and (max-width: 700px){
+    header{
+        height: 50vh;
+        div{
+            width: 80%;
+            margin-inline: auto;
+        }
+    }
+    .about-us{
+        grid-template-areas: "text" "img";
+        grid-template-rows: 1fr 1fr;
+        .text, .img{
+            width: 100vw;
+        }
+        h2::after{
+            width: 40vw;
+            margin-inline: auto;
+        }
+    }
+    .book{
+        margin-inline: 0;
+    }
+    nav{
+        a{
+        margin-right: 0;
+        }
+        nav * + *{
+            margin-left: 1rem;
+            margin-right: 0;
+        }
+        .phone{
+            display: none;
+        }
+    }
+    .covid{
+        div{
+            margin: 4rem 0;
+            width: 80%;
+        }
+    }
+
+    .contact-form{
+        flex-direction: column;
+        grid-template-areas: "form" "submit-img";
+        > *{
+            width: 100vw;
+        }
+    }
+    .footer-contents{
+        flex-direction: column;
+        height: auto;
+        img{
+            margin-top: 1.5rem;
+        }
+        div{
+            margin-top: 2rem;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+    .address{
+        margin-top: 2rem;
+    }
+    .rights{
+        display: none;
+    }
+
 }
 
 

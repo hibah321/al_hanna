@@ -19,7 +19,6 @@
     <nav>
         <img class="logo" src="./images/AL-HANNA-LOGO-Header.png" alt="">
         <div class = "navbar-contents">
-            <a href="">HOME</a>
             <div class="phone">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
                     <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
@@ -32,14 +31,14 @@
                 </svg>
                 058 558 6786
             </div>
-            <button>BOOK APPOINTMENT</button>
+            <a href="#form"><button onclick="form" class="book toForm">BOOK APPOINTMENT</button></a>
         </div>
     </nav>
     <header>
         <div>
             <h3>Al Hanna Home Healthcare Center</h3>
             <p>Caring for You and Your Family</p>
-            <button>Find a Doctor</button>
+            <a href="#form"><button class="pcr-test  toForm">Take PCR Test</button></a>
         </div>  
     </header>
     <section class="about-us">
@@ -81,12 +80,12 @@
         <div>
             <h2 class="heading">Get Tested for Covid at home</h2>
             <h1>PCR Test at the ease of your home</h1>
-            <button>Take PCR Test</button>
+            <a href="#form"><button class="pcr-test  toForm">Take PCR Test</button></a>
         </div>
     </section>
 
-    <section class="contact-form">
-        <form action="https://formsubmit.co/hbhshahbaz321@gmail.com" method="post" class="input-field">
+    <section id="form" class="contact-form">
+        <form action="https://formsubmit.co/info@alhannahhcc.com" method="post" class="input-field">
             <h2>Get an Appointment Today</h2>
             <input type="text" name="name" id="name" placeholder="Name" required>
             <input type="text" name="email" id="email" placeholder="Email"required>
@@ -114,12 +113,13 @@
                 <span>info@alhannahhcc.com</span>
             </div>
         </div>
-        <div class="address"><span>Address:&emsp;&emsp; 202 Ketbi Building (Next to Capital Hotel) Madinat Al-Malayeag, Al-mina road, Dubai.</span </div>
+        <div class="address"><span>Address:&emsp; 202 Ketbi Building (Next to Capital Hotel) Madinat Al-Malayeag, Al-mina road, Dubai.</span </div>
     </footer>
 
     <div class="rights">
         <p>© 2021 www.alhannahhcc.com All Rights Reserved</p>
     </div>
-    
+
+    <script src="/main.js"></script> 
 </body>
 </html>

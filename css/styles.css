@@ -4,11 +4,14 @@ body {
   padding: 0;
   height: 100vh;
   width: 100vw;
-  overflow-x: hidden;
 }
 
 button {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .heading {
@@ -28,7 +31,6 @@ button {
   background-color: #0088BC;
   width: 40%;
   height: 7px;
-  transition: all 2s 0 ease;
   border-radius: 5px;
 }
 
@@ -37,9 +39,24 @@ button {
   height: 80px;
 }
 
+.pcr-test {
+  font-size: 1rem;
+  margin-top: 0rem;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border-color: transparent;
+  background-color: #EF576C;
+  font: Arial, Helvetica, sans-serif;
+  color: white;
+  font-weight: 700;
+}
+
 header {
   margin: 0;
   height: 90vh;
+  box-sizing: border-box;
   background-image: URL("/images/successful-medical-team.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -68,6 +85,7 @@ header div {
   padding: 3rem;
   max-height: 100%;
   min-height: fit-content;
+  box-sizing: border-box;
 }
 
 nav {
@@ -79,7 +97,6 @@ nav {
   color: white;
   background-color: #0088BC;
   font-weight: 600;
-  height: 15%;
 }
 
 nav button {
@@ -91,6 +108,7 @@ nav button {
   border-color: transparent;
   box-sizing: border-box;
   padding: 1rem;
+  cursor: pointer;
 }
 
 nav .navbar-contents {
@@ -108,6 +126,7 @@ nav .phone {
   padding: 0.5rem;
   border-radius: 25px;
   color: white;
+  cursor: pointer;
 }
 
 nav a {
@@ -116,20 +135,21 @@ nav a {
   margin-right: 2rem;
 }
 
+nav .logo {
+  margin: 1rem 0;
+}
+
 .about-us {
-  display: flex;
-  width: 100%;
-  height: 70vh;
+  display: grid;
+  grid-template-areas: "text img";
+  grid-template-columns: 1fr 1fr;
+  max-width: 100%;
   border-bottom: 2px solid #0088BC;
   margin-bottom: -2px;
 }
 
-.about-us div {
-  width: 50%;
-}
-
 .about-us .img {
-  width: 50vw;
+  grid-area: img;
   background-image: URL("/images/about-us.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -137,22 +157,24 @@ nav a {
 }
 
 .about-us .text {
-  width: 40vw;
-  padding: 5%;
+  grid-area: text;
+  box-sizing: border-box;
+  margin-inline: auto;
+  margin: auto auto;
   display: flex;
   align-items: center;
-  justify-content: space-around;
   flex-direction: column;
+  padding: 10%;
 }
 
 .about-us h2 {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 .about-us h2:after {
-  width: 140%;
-  margin-left: -20%;
+  min-width: 100%;
 }
 
 .about-us p {
@@ -164,35 +186,36 @@ nav a {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  min-height: 60vh;
   padding: 4rem 0 4rem 0;
+  box-sizing: border-box;
+  width: 100%;
   border-bottom: 2px solid #0088BC;
 }
 
 .services .services-content {
+  box-sizing: border-box;
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  margin-top: -30px;
+  justify-content: space-evenly;
 }
 
 .services .services-content div {
+  box-sizing: border-box;
   color: #0088BC;
-  width: 200px;
+  width: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 30px;
   outline: 1px solid #0088BC;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 2rem 0 2rem 0;
+  margin-top: 1rem;
 }
 
 .covid {
   width: 100%;
-  height: 80vh;
   background-image: URL("/images/pcr.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -206,6 +229,7 @@ nav a {
 .covid div {
   width: 45%;
   margin-left: 5%;
+  margin: 10rem 0;
   padding: 2rem 0 2rem 0;
   background-color: rgba(255, 255, 255, 0.8);
 }
@@ -224,28 +248,14 @@ nav a {
   color: #0088BC;
 }
 
-.covid button {
-  font-size: 1rem;
-  margin-top: 0rem;
-  padding: 0.5rem;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  border-color: transparent;
-  background-color: #EF576C;
-  font: Arial, Helvetica, sans-serif;
-  color: white;
-  font-weight: 700;
-}
-
 .contact-form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 60vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "form submit-img";
 }
 
 .contact-form div {
-  width: 50vw;
   margin: 0;
   padding: 0;
 }
@@ -256,17 +266,28 @@ nav a {
 }
 
 .contact-form .input-field {
-  width: 50vw;
+  grid-area: form;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   background-color: #0088BC;
-  height: 100%;
 }
 
 .contact-form .input-field > * {
   width: 80%;
+}
+
+.contact-form .submit-img {
+  grid-area: submit-img;
+  box-sizing: border-box;
+  height: 500px;
+  box-shadow: inset 0 0 0 1000px rgba(0, 136, 188, 0.3);
+  background-image: URL("/images/submit1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .contact-form input[type=text] {
@@ -310,6 +331,10 @@ nav a {
   /* Firefox */
 }
 
+.contact-form * > * {
+  margin-top: 30px;
+}
+
 .contact-form button {
   width: 40% !important;
   margin-bottom: 30px;
@@ -322,17 +347,7 @@ nav a {
 }
 
 .contact-form #msg {
-  height: 30%;
-}
-
-.contact-form .submit-img {
-  width: 50%;
-  height: 100%;
-  box-shadow: inset 0 0 0 1000px rgba(0, 136, 188, 0.3);
-  background-image: URL("/images/submit1.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 150px;
 }
 
 footer {
@@ -376,5 +391,89 @@ footer {
 
 i {
   color: #006389;
+}
+
+.phone:hover {
+  background-color: white;
+  border-color: #0088BC;
+  color: #0088BC;
+}
+
+.phone:hover svg {
+  fill: #0088BC;
+}
+
+.book:hover {
+  background-color: #0088BC;
+  border: 2px solid white;
+  color: white;
+}
+
+.pcr-test:hover, #submit:hover {
+  background-color: #eb2843;
+  cursor: pointer;
+}
+
+@media all and (max-width: 700px) {
+  header {
+    height: 50vh;
+  }
+  header div {
+    width: 80%;
+    margin-inline: auto;
+  }
+  .about-us {
+    grid-template-areas: "text" "img";
+    grid-template-rows: 1fr 1fr;
+  }
+  .about-us .text, .about-us .img {
+    width: 100vw;
+  }
+  .about-us h2::after {
+    width: 40vw;
+    margin-inline: auto;
+  }
+  .book {
+    margin-inline: 0;
+  }
+  nav a {
+    margin-right: 0;
+  }
+  nav nav * + * {
+    margin-left: 1rem;
+    margin-right: 0;
+  }
+  nav .phone {
+    display: none;
+  }
+  .covid div {
+    margin: 4rem 0;
+    width: 80%;
+  }
+  .contact-form {
+    flex-direction: column;
+    grid-template-areas: "form" "submit-img";
+  }
+  .contact-form > * {
+    width: 100vw;
+  }
+  .footer-contents {
+    flex-direction: column;
+    height: auto;
+  }
+  .footer-contents img {
+    margin-top: 1.5rem;
+  }
+  .footer-contents div {
+    margin-top: 2rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .address {
+    margin-top: 2rem;
+  }
+  .rights {
+    display: none;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
