@@ -19,25 +19,19 @@
     <nav>
         <img class="logo" src="./images/AL-HANNA-LOGO-Header.png" alt="">
         <div class = "navbar-contents">
-            <div class="phone">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
-                    <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-                </svg>
-                052 786 6227
-            </div>
-            <div class="phone">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
-                    <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-                </svg>
-                058 558 6786
-            </div>
-            <a href="#form"><button onclick="form" class="book toForm">Contact Us</button></a>
+            <a class="nav-links" href="/home.html">Home</a>
+            <a  class="nav-links" href="/about.html">About Us</a>
+            <a class="nav-links" href="/doctor.html">Doctor on Call</a>
+            <a class="nav-links" href="/physiotherapy.html">Physiotherapy</a>
+            <a class="nav-links" href="/careers.html">Careers</a>
+            <a class="nav-links" href="/contact.html">Contact Us</a>
+            <a href="#form"><button onclick="form" class="book toForm">Book Appointment</button></a>
         </div>
     </nav>
     <header>
         <div>
             <h3>Al Hanna Home Healthcare Center</h3>
-            <p>Get a doctor on Call Anywhere Anytime            </p>
+            <p>Get a doctor on Call Anywhere Anytime</p>
             <a href="#form"><button class="pcr-test  toForm">Take PCR Test</button></a>
         </div>  
     </header>
@@ -45,8 +39,9 @@
         <div class="text">
             <h2 class="heading">About Us</h2>
             <p>
-                At AL Hanna healthcare institution, we work around the clock to find the best solutions to your medical needs. We keep our clients informed throughout the process to let them participate in their own care. Over and above that, we help our patients in asking focused questions, questions that will lead to better outcomes.
+                At Al Hanna Healthcare Center, we provide healthcare services while breaking all barriers. Our doctor-on-call service strives to provide the highest quality of life to patients anywhere anytime in Dubai through experienced, compassionate medical care.
             </p>
+            <a href="/about.html"><button class="learn-more">LEARN MORE</button></a>
         </div>
         <div class="img">
         </div>
@@ -90,10 +85,10 @@
     <section id="form" class="contact-form">
         <form action="https://formsubmit.co/info@alhannahhcc.com" method="post" class="input-field">
             <h2>Contact Us</h2>
-            <input type="text" name="name" id="name" placeholder="Name" required>
-            <input type="text" name="email" id="email" placeholder="Email"required>
-            <input type="text" name="Phone Number" placeholder="Contact Number">
-            <input type="text" name="message" id="msg" placeholder="Enter Message">
+            <input type="text" name="Name" id="name" placeholder="Name" required>
+            <input type="text" name="Email" id="email" placeholder="Email" required>
+            <input type="text" name="Phone Number" placeholder="Contact Number" required>
+            <input type="text" name="Message" id="msg" placeholder="Enter Message" required>
             <button id="submit">SUBMIT</button>
         </form>
         <div class="submit-img">
@@ -122,8 +117,7 @@
 
     <div class="rights">
         <p>© 2021 www.alhannahhcc.com All Rights Reserved</p>
-    </div>x x
-
+    </div>
     <script src="/main.js"></script> 
 </body>
 </html>

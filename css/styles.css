@@ -2,8 +2,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
+}
+
+body * {
+  overflow-y: hidden;
 }
 
 button {
@@ -12,6 +16,43 @@ button {
 
 html {
   scroll-behavior: smooth;
+}
+
+.header {
+  height: 40vh;
+  background-image: URL("/images/header-about.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 0 1000px rgba(0, 136, 188, 0.5);
+}
+
+.main {
+  display: grid;
+  grid-template-areas: "img text";
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: 1fr;
+  box-sizing: border-box;
+  box-shadow: 0px 10px 35px 0px rgba(143, 143, 143, 0.75);
+  -webkit-box-shadow: 0px 10px 35px 0px rgba(143, 143, 143, 0.75);
+  -moz-box-shadow: 0px 10px 35px 0px rgba(143, 143, 143, 0.75);
+  width: calc(min(90vw,950px));
+  color: #005170;
+  margin: 0 auto;
+  background-color: white;
+  margin-top: -150px;
+}
+
+.main .text {
+  padding: 3rem 8% 3rem 8%;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.main h1:after {
+  width: 110% !important;
+  margin-left: -5%;
 }
 
 .heading {
@@ -53,6 +94,155 @@ html {
   font-weight: 700;
 }
 
+#submit {
+  width: 40% !important;
+  margin-bottom: 30px;
+  background-color: #EF576C;
+  border-color: transparent;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-weight: 700;
+  padding: 0.5rem;
+}
+
+#msg {
+  height: 150px;
+}
+
+.nav-links {
+  color: #cbf1ff;
+}
+
+.nav-links:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.learn-more {
+  background-color: transparent;
+  color: #006389;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+}
+
+.learn-more:after {
+  display: block;
+  content: '';
+  width: 125px;
+  height: 5px;
+  background-color: #0088BC;
+  border-radius: 25px;
+  margin-top: -3px;
+}
+
+.learn-more:hover {
+  color: #0088BC;
+  cursor: pointer;
+}
+
+.img {
+  grid-area: img;
+  background-image: URL("/images/about-us.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text {
+  grid-area: text;
+  box-sizing: border-box;
+  margin-inline: auto;
+  margin: auto auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 100%;
+  padding-inline: 3rem;
+  max-width: 100vw;
+  color: white;
+  background-color: #0088BC;
+  font-weight: 600;
+}
+
+nav button {
+  height: 50%;
+  background-color: white;
+  color: #0088BC;
+  font-weight: 700;
+  font-size: 1.25rem;
+  border-radius: 25px;
+  border-color: transparent;
+  box-sizing: border-box;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+nav .navbar-contents {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+nav * + * {
+  margin-left: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+nav .logo {
+  margin: 1rem 0;
+}
+
+footer {
+  background-color: #006389;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #d6ebff;
+  font-weight: 500;
+  text-align: center;
+}
+
+.footer-contents {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 40vh;
+}
+
+.footer-contents div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 2rem;
+  max-width: 15rem;
+}
+
+.address {
+  padding-bottom: 2rem;
+}
+
+.rights {
+  background-color: #005170;
+  color: #96b1ca;
+  height: 40px;
+  text-align: center;
+}
+
+.rights p {
+  transform: translateY(50%);
+  margin: 0;
+}
+
 header {
   margin: 0;
   height: 90vh;
@@ -88,58 +278,6 @@ header div {
   box-sizing: border-box;
 }
 
-nav {
-  display: flex;
-  align-items: center;
-  flex-grow: 100%;
-  padding-inline: 3rem;
-  max-width: 100vw;
-  color: white;
-  background-color: #0088BC;
-  font-weight: 600;
-}
-
-nav button {
-  height: 50%;
-  background-color: white;
-  color: #0088BC;
-  font-weight: 700;
-  font-size: 1.25rem;
-  border-radius: 25px;
-  border-color: transparent;
-  box-sizing: border-box;
-  padding: 1rem;
-  cursor: pointer;
-}
-
-nav .navbar-contents {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-}
-
-nav * + * {
-  margin-inline: 1rem;
-}
-
-nav .phone {
-  border: 2px solid white;
-  padding: 0.5rem;
-  border-radius: 25px;
-  color: white;
-  cursor: pointer;
-}
-
-nav a {
-  text-decoration: none;
-  color: white;
-  margin-right: 2rem;
-}
-
-nav .logo {
-  margin: 1rem 0;
-}
-
 .about-us {
   display: grid;
   grid-template-areas: "text img";
@@ -147,25 +285,6 @@ nav .logo {
   max-width: 100%;
   border-bottom: 2px solid #0088BC;
   margin-bottom: -2px;
-}
-
-.about-us .img {
-  grid-area: img;
-  background-image: URL("/images/about-us.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.about-us .text {
-  grid-area: text;
-  box-sizing: border-box;
-  margin-inline: auto;
-  margin: auto auto;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 10%;
 }
 
 .about-us h2 {
@@ -335,60 +454,6 @@ nav .logo {
   margin-top: 20px;
 }
 
-.contact-form button {
-  width: 40% !important;
-  margin-bottom: 30px;
-  background-color: #EF576C;
-  border-color: transparent;
-  font-family: Arial, Helvetica, sans-serif;
-  color: white;
-  font-weight: 700;
-  padding: 0.5rem;
-}
-
-.contact-form #msg {
-  height: 150px;
-}
-
-footer {
-  background-color: #006389;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: #d6ebff;
-  font-weight: 500;
-  text-align: center;
-}
-
-.footer-contents {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  height: 40vh;
-}
-
-.footer-contents div {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  line-height: 2rem;
-  max-width: 15rem;
-}
-
-.address {
-  padding-bottom: 2rem;
-}
-
-.rights {
-  background-color: #005170;
-  color: #96b1ca;
-  height: 40px;
-  text-align: center;
-}
-
-.rights p {
-  transform: translateY(50%);
-  margin: 0;
-}
-
 i {
   color: #006389;
 }
@@ -412,6 +477,117 @@ i {
 .pcr-test:hover, #submit:hover {
   background-color: #eb2843;
   cursor: pointer;
+}
+
+.m-v {
+  width: calc(min(90vw,950px));
+  color: #006389;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.m-v h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.m-v div {
+  box-sizing: border-box;
+  text-align: justify;
+  background-color: white;
+  padding: 3rem;
+  width: 40%;
+  box-shadow: 0px 10px 35px 0px rgba(143, 143, 143, 0.75);
+  -webkit-box-shadow: 0px 10px 35px 0px rgba(143, 143, 143, 0.75);
+  -moz-box-shadow: 0px 10px 35px 0px rgba(143, 143, 143, 0.75);
+}
+
+.phy {
+  margin-bottom: 4rem;
+}
+
+.phy .img {
+  background-image: url("/images/physiotherapy.jpg");
+  box-shadow: inset 0 0 0 1000px rgba(0, 136, 188, 0.4);
+}
+
+.doctor {
+  margin-bottom: 4rem;
+}
+
+.doctor .img {
+  background-image: url("/images/doctor.jpg");
+  box-shadow: inset 0 0 0 1000px rgba(0, 136, 188, 0.4);
+}
+
+.contact {
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 4rem;
+}
+
+.contact i {
+  margin-bottom: 1rem;
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.contact > div {
+  padding: 3rem;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact > * + * {
+  border-left: 1px solid #0087bc9f;
+}
+
+.careers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #0088BC;
+  color: white;
+  padding: 2rem 4rem 2rem 4rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.careers h1 {
+  margin-bottom: 0;
+}
+
+.careers form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.careers form * + * {
+  margin-top: 1rem;
+}
+
+.careers input {
+  width: 90%;
+  line-height: 2rem;
+  padding-left: 1rem;
+  border-color: transparent;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #363b53;
 }
 
 @media all and (max-width: 700px) {
@@ -475,6 +651,9 @@ i {
   }
   .rights {
     display: none;
+  }
+  .main {
+    width: 98%;
   }
 }
 /*# sourceMappingURL=styles.css.map */
