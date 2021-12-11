@@ -248,7 +248,7 @@ html {
     left: 0;
   }
   .nav-item {
-    margin: 2.5rem 0;
+    margin: 1.75rem 0;
   }
   .hamburger {
     display: block;
@@ -315,7 +315,6 @@ footer {
 
 header {
   margin: 0;
-  height: 90vh;
   box-sizing: border-box;
   background-image: URL("/images/successful-medical-team.png");
   background-position: center;
@@ -323,19 +322,21 @@ header {
   background-size: cover;
   color: #003e56;
   outline: 2px solid #0088BC;
+  padding: 3rem 0;
   display: flex;
   align-items: center;
+  min-height: fit-content;
 }
 
 header h3 {
   font-weight: 500;
   margin: 0;
-  font-size: clamp(1.5rem, 3vw, 1.75rem);
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
 }
 
 header p {
   font-weight: 800;
-  font-size: clamp(2.15rem, 5vw, 3rem);
+  font-size: clamp(2rem, 3vw, 3rem);
   margin: 0;
 }
 
@@ -343,7 +344,7 @@ header div {
   background-color: rgba(255, 255, 255, 0.8);
   width: 55%;
   padding: 4rem;
-  max-height: 100%;
+  display: block;
   min-height: fit-content;
   box-sizing: border-box;
 }
@@ -754,6 +755,7 @@ i {
   header div {
     width: 80%;
     margin-inline: auto;
+    padding-inline: 1rem;
   }
   .about-us {
     grid-template-areas: "text" "img";
