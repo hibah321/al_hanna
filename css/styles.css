@@ -59,7 +59,7 @@ html {
 
 .heading {
   margin-top: 5rem;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   color: #006389;
   font-weight: 700;
   text-align: center;
@@ -97,7 +97,7 @@ html {
 
 .pcr-test {
   position: relative;
-  font-size: 1.25rem;
+  font-size: 1rem;
   margin-top: 0rem;
   padding: 0.5rem;
   margin-top: 1rem;
@@ -118,8 +118,8 @@ html {
   border-color: transparent;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
+  font-size: 1rem;
   font-weight: 700;
-  font-size: 1.25rem;
   padding: 0.5rem;
 }
 
@@ -135,7 +135,7 @@ html {
 .learn-more {
   background-color: transparent;
   color: #006389;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 600;
   border: none;
 }
@@ -143,7 +143,7 @@ html {
 .learn-more:after {
   display: block;
   content: '';
-  width: 150px;
+  width: 125px;
   height: 5px;
   background-color: #0088BC;
   border-radius: 25px;
@@ -165,7 +165,6 @@ html {
 
 .text {
   grid-area: text;
-  font-size: 1.25rem;
   box-sizing: border-box;
   margin-inline: auto;
   margin: auto auto;
@@ -187,7 +186,7 @@ html {
   background-color: #0088BC;
   color: white;
   font-weight: 600;
-  font-size: 1.35rem;
+  font-size: 1.15rem;
 }
 
 .hamburger {
@@ -212,6 +211,10 @@ html {
 
 .nav-item {
   margin-left: 2rem;
+}
+
+.nav-item:hover {
+  text-decoration: underline;
 }
 
 .nav-logo {
@@ -282,14 +285,13 @@ footer {
   justify-content: center;
   flex-direction: column;
   line-height: 2rem;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   max-width: 15rem;
-  min-width: fit-content;
 }
 
 .address {
   padding-bottom: 2rem;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
 }
 
 .rights {
@@ -326,17 +328,51 @@ header h3 {
 
 header p {
   font-weight: 800;
-  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-size: clamp(2.15rem, 5vw, 3rem);
   margin: 0;
 }
 
 header div {
   background-color: rgba(255, 255, 255, 0.8);
-  width: 40%;
-  padding: 3rem;
+  width: 55%;
+  padding: 4rem;
   max-height: 100%;
   min-height: fit-content;
   box-sizing: border-box;
+}
+
+.info {
+  background-color: white;
+  line-height: 2rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border-bottom: 2px solid #0088BC;
+}
+
+.info a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.info a:hover {
+  text-decoration: underline;
+}
+
+.info a, .info h3 {
+  display: inline-block;
+  vertical-align: baseline;
+  color: #0088BC;
+  font-size: 1.25rem;
+}
+
+.info div {
+  padding: 1rem;
+  display: flex;
+}
+
+.info div * {
+  margin: 5px;
 }
 
 .about-us {
@@ -346,6 +382,7 @@ header div {
   max-width: 100%;
   border-bottom: 2px solid #0088BC;
   margin-bottom: -2px;
+  font-size: 1.25rem;
 }
 
 .about-us h2 {
@@ -359,7 +396,7 @@ header div {
 }
 
 .about-us p {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: #006389;
 }
 
@@ -397,6 +434,48 @@ header div {
   margin-bottom: 2rem;
 }
 
+.how-works {
+  padding: 3rem 0 0 0;
+  border-bottom: 2px solid #0088BC;
+  padding-bottom: 2rem;
+}
+
+.how-works p {
+  border: 3px solid #0088BC;
+  border-radius: 25px;
+  font-size: 1.5rem;
+  width: 90%;
+  margin-inline: auto;
+  color: #0076a3;
+  padding: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.how-works span {
+  font-size: 2rem;
+  color: #006389;
+}
+
+.steps {
+  margin-top: 0;
+  background-color: #0088BC;
+}
+
+.steps h2 {
+  font-size: 1.25rem;
+  text-align: center;
+  color: white;
+}
+
+.steps div + div {
+  border-left: 1px solid rgba(255, 255, 255, 0.712);
+}
+
+.steps i {
+  color: white;
+}
+
 .covid {
   width: 100%;
   background-image: URL("/images/pcr.png");
@@ -427,9 +506,8 @@ header div {
 }
 
 .covid h1 {
-  width: fit-content;
   margin-inline: auto;
-  padding-left: 1rem;
+  width: fit-content;
   font-size: 2rem;
   color: #0088BC;
 }
@@ -572,7 +650,7 @@ i {
   box-sizing: border-box;
   text-align: justify;
   background-color: white;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   padding: 3rem;
   width: 40%;
   margin-bottom: 2rem;
@@ -743,6 +821,9 @@ i {
   }
   .contact > * + * {
     border-top: 1px solid #0087bc9f;
+  }
+  .steps > * + * {
+    border-top: 1px solid rgba(255, 255, 255, 0.815);
   }
 }
 /*# sourceMappingURL=styles.css.map */
