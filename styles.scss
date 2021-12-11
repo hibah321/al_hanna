@@ -19,6 +19,9 @@ body{
 
     // overflow-x: hidden;
 }
+body.lock-scroll{
+    overflow-y: hidden;
+}
 button{
     font-family: $font-primary;
 }
@@ -253,6 +256,9 @@ html{
     .hamburger {
         display: block;
         cursor: pointer;
+    }
+    .hamburger.active{
+        overflow-y: hidden;
     }
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
