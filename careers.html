@@ -24,6 +24,9 @@
                 <a class="nav-links" href="/physiotherapy.html">Physiotherapy</a>
             </li>
             <li class="nav-item">
+                <a class="nav-links" href="/careers.html">Careers</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-links" href="/contact.html">Contact Us</a>
             </li>
             <li class="nav-item">
@@ -41,12 +44,14 @@
     <div class="careers main">
         <h1>JOIN OUR TEAM</h1>
         <p>We invite you to join our team if you are qualified and experienced in home healthcare. You can apply by filling out the form below or sending your resume to info@alhannahhcc.com.</p>
-        <form class="career-form" action="https://formsubmit.co/reception.alhanna@gmail.com" method="post" >
+        <form id="for"class="career-form" action="https://formsubmit.co/reception.alhanna@gmail.com" method="post" enctype="multipart/form-data">
             <input type="text" name="Applying as" id="applying as" placeholder="Applying as" required>
             <input type="text" name="Name" id="name" placeholder="Name" required>
             <input type="text" name="Email" id="email" placeholder="Email" required>
             <input type="text" name="Phone Number" placeholder="Contact Number" required>
             <input type="text" name="Message" id="msg" placeholder="Enter Message" required>
+            <div id="yourBtn" onclick="getFile()">UPLOAD CV</div>
+            <div style='height: 0px;width:0px; overflow:hidden;'><input id="upfile" name="attachment" type="file" value="upload" onchange="sub(this)"/></div>        
             <button id="submit">SUBMIT</button>
         </form>
     </div>

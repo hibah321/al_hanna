@@ -682,7 +682,60 @@ i {
 
 .doctor .img {
   background-image: url("/images/doctor.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
   box-shadow: inset 0 0 0 1000px rgba(0, 136, 188, 0.4);
+}
+
+.doc {
+  width: 60%;
+  display: grid;
+  margin-inline: auto;
+  margin-bottom: 3rem;
+  grid-template-areas: "head head" "doc-pic doc-info";
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 3fr;
+  background-color: white;
+  box-shadow: 0px 10px 35px 0px rgba(143, 143, 143, 0.75);
+  -webkit-box-shadow: 0px 10px 35px 0px rgba(143, 143, 143, 0.75);
+  -moz-box-shadow: 0px 10px 35px 0px rgba(143, 143, 143, 0.75);
+}
+
+.doc h1 {
+  grid-area: head;
+  color: #006389;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 700;
+}
+
+.doc .doc-img {
+  grid-area: doc-pic;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.doc .doc-info {
+  grid-area: doc-info;
+  color: #006389;
+  padding: 2rem 3rem 2rem 3rem;
+}
+
+.doc h2 {
+  color: #006389;
+  text-align: center;
+}
+
+@media all and (max-width: 900px) {
+  .doc {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .contact {
@@ -746,6 +799,16 @@ i {
   font-weight: 600;
   font-size: 1rem;
   color: #363b53;
+}
+
+.careers #yourBtn {
+  cursor: pointer;
+  padding: 1rem;
+  color: #0088BC;
+  background-color: white;
+  border: 2px solid #0088BC;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 @media all and (max-width: 700px) {
